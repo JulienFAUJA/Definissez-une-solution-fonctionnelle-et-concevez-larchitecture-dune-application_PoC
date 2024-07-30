@@ -20,11 +20,11 @@ Ce projet a été généré avec [Angular CLI](https://github.com/angular/angula
 
 ### Clonez le projet git:
 
-> git clone https://github.com/JulienFAUJA/Definissez-une-solution-fonctionnelle-et-concevez-larchitecture-dune-application
+> git clone https://github.com/JulienFAUJA/Definissez-une-solution-fonctionnelle-et-concevez-larchitecture-dune-application_PoC
 
 Allez dans le dossier:
 
-> cd Definissez-une-solution-fonctionnelle-et-concevez-larchitecture-dune-application/front
+> cd Definissez-une-solution-fonctionnelle-et-concevez-larchitecture-dune-application_PoC/front
 
 ### Installez les dependances:
 
