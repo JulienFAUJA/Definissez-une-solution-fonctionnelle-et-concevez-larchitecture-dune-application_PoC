@@ -1,0 +1,42 @@
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  img{
+    width: 40%;
+    height:auto;
+  }
+}
+.buttons_container{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  button{
+    width: 100%;
+    &:first{
+      float: left;
+      margin-right: 25px;
+    }
+    &:nth-of-type(2){
+      float: right;
+      margin-left: 25px;
+    }
+  }
+
+  // Media query pour les appareils en orientation portrait
+  @media (orientation: portrait) {
+    display: block;
+    
+    button {
+      float: none; // Annule le float pour aligner les boutons verticalement
+      display: block; // Chaque bouton prend sa propre ligne
+      margin-bottom: 10px; // Espacement entre les boutons, ajustez selon besoin
+      margin-top: 10px; // Espacement entre les boutons, ajustez selon besoin
+    }
+  }
+}
+
+

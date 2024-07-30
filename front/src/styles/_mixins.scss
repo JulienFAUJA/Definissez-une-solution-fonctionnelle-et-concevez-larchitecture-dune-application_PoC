@@ -1,0 +1,20 @@
+
+
+@mixin display_flex($align: center, $justify: center, $direction: row) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin screen_max_width($breakpoint) {
+    @media (max-width: $breakpoint) {
+        @content;
+    }
+}
+
+@mixin screen_min_width($breakpoint) {
+    @media (min-width: $breakpoint) {
+        @content;
+    }
+}

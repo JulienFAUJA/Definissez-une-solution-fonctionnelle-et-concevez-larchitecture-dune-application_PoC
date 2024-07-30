@@ -1,0 +1,102 @@
+
+  
+  .chat_frame {
+    margin-top: 40px;
+    overflow-y: scroll;
+    height: calc(100vh - 350px);
+    width: 80%;
+    padding: 20px;
+    background-color: rgb(255, 255, 255);
+    color: black;
+    border: 1px solid black;
+  
+    .bubble {
+      display: flexbox;
+      width: 50%;
+      
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      border: 1px solid black;
+      margin-top: 20px;
+      
+  
+      &.bubble-blue {
+        .email_container{
+            padding: 0;
+            
+            
+        }
+        .email_title{
+            padding: 5px 5px 5px 10px;
+            background-color:rgb(207, 22, 198);
+            border-bottom: 1px solid white;
+            margin-bottom: 10px;
+            
+          }
+        position: relative;
+        right: 0;
+        float: right;
+        background-color: rgb(255, 155, 240);
+        font-weight: bold;
+      }
+  
+      &.bubble-grey {
+        .email_container{
+            padding: 0;
+            
+            
+        }
+        .email_title{
+            padding: 5px 5px 5px 10px;
+            background-color:rebeccapurple;
+            border-bottom: 1px solid white;
+            margin-bottom: 10px;
+            
+          }
+        position: relative;
+        left: 0;
+        float: left;
+        background-color: rgb(75, 75, 248);
+        color:white;
+        font-weight: bold;
+      }
+      :not(.email_container){
+        padding:10px;
+      }
+      
+
+      
+    }
+
+  }
+  
+  
+   
+.form_container3{
+ 
+    display: flexbox;
+  flex-direction: column;
+  align-items:stretch;
+  
+  width: 80%;
+    padding: 20px;
+  padding-top: 0;
+   
+   background-color: rebeccapurple;
+   form{
+    input{
+        position: relative;
+        min-width: 1200px;
+        left: 0;
+        
+    }
+    button{
+        position: relative;
+        right: 0;
+        float: right;
+        
+       
+    }
+}
+   
+  }

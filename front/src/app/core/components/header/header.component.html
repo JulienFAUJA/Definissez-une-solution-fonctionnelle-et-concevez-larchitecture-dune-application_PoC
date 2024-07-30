@@ -1,0 +1,54 @@
+<div class="header-container">
+  
+  <ul
+    class="header_nav_ul header_item"
+    *ngIf="screen_orientation === 'landscape-primary'; else mobileView"
+  >
+  <li class="nav_item_li header_item">
+    <a class="brand_a" routerLink="" routerLinkActive="active-item">
+     Your Car Your Way
+    </a>
+  </li>
+   
+    <li class="nav_item_li header_item">
+      <a routerLink="/chat" routerLinkActive="active-item">Chat</a>
+    </li>
+    <li class="nav_item_li header_item">
+
+
+       
+    </li>
+  </ul>
+  <ng-template #mobileView>
+    <!-- Contenu pour les écrans non-paysage -->
+    <div>
+      <a id="burger_menu_btn" class="menu-icon" (click)="toggleMenu()">
+        <mat-icon
+          aria-hidden="false"
+          aria-label="Example home icon"
+          fontIcon="menu"
+        ></mat-icon>
+      </a>
+    </div>
+  </ng-template>
+</div>
+
+
+
+
+
+<aside id="sidebar" class="sidebar">
+  <div class="nav_overlay">
+    <ul class="header_nav_ul_mobile">
+      
+      
+      <li>
+        
+      </li>
+    </ul>
+    </div>
+
+</aside>
+<div id="overlay" class="overlay" (click)="toggleMenu()"></div>
+
+

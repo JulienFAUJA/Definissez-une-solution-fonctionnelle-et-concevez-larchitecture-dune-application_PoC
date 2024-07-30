@@ -1,0 +1,18 @@
+@import '../../../styles/styles';
+
+.register-container{
+    margin-top: 0;
+    padding-bottom: 150px;
+    margin-bottom: 150px;
+    form{
+        margin-top: 0;
+        margin-bottom: 0;
+        padding: 0;
+        h3{
+            margin-bottom: 2px;
+        }
+        .form-group {
+            margin-bottom: 2px;
+        }
+    }
+}

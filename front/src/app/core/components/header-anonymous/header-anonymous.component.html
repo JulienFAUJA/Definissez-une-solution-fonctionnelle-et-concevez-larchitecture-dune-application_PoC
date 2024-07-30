@@ -1,0 +1,20 @@
+<div class="header-container" *ngIf="screen_orientation==='landscape-primary'; else mobileView">
+<div class="header-sub-container" >
+    <a class="user_icon" routerLink="" routerLinkActive="active-item">
+        <img src="./assets/images/" alt="Your Car Your Way" class="logo ">
+    </a>
+     
+</div>
+
+  </div>
+
+  <ng-template #mobileView>
+    <!-- Contenu pour les écrans non-paysage -->
+ 
+    <div class="center">
+        <img src="./assets/images/" alt="Your Car Your Way" />
+        
+      </div>
+    
+</ng-template>
+
