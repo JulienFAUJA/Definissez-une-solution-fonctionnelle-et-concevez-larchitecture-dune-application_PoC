@@ -12,7 +12,7 @@
 
 Cette application est la PoC (Proof of Concept) du chat d'une plateforme de location de voiture. La partie Back-end qui est développée en **[Java](#java)** avec le **[framework](#framework)** **[Spring](#spring)** et spécifiquement **[Spring Security](#spring_security)**. Quant à la partie Front-end, elle est développée en **[Angular](#angular)**, qui est un framework **[Typescript](#typescript)**, qui lui-même est un langage basé sur **[Javascript](#javascript)**.
 
-Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 14.1.3. ![Angular](https://img.shields.io/badge/angular_CLI-v14.1.3-blue)
+Ce projet a été généré avec [Angular CLI](https://github.com/angular/angular-cli) version 14.3.0. ![Angular](https://img.shields.io/badge/angular_CLI-v14.3.0-blue)
 
 ---
 
