@@ -6,12 +6,13 @@ import * as fr from '@angular/common/locales/fr';
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from '../material/material.module';
 import { HomeComponent } from '../pages/home/home.component';
-import { LoginComponent } from '../pages/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HeaderAnonymousComponent } from './components/header-anonymous/header-anonymous.component';
 import { AuthInterceptor } from '../interceptors/auth.interceptor';
 import { ChatComponent } from './components/chat/chat.component';
-import { RegisterComponent } from '../pages/register/register.component';
+import { ImageLinkPipe } from 'app/core/pipes/image-link.pipe';
+import { LoginComponent } from 'app/pages/login/login.component';
+import { RegisterComponent } from 'app/pages/register/register.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { RegisterComponent } from '../pages/register/register.component';
     RegisterComponent,
     HeaderAnonymousComponent,
     ChatComponent,
+    ImageLinkPipe,
   ],
   imports: [
     CommonModule,
@@ -36,6 +38,7 @@ import { RegisterComponent } from '../pages/register/register.component';
     RegisterComponent,
     MaterialModule,
     ReactiveFormsModule,
+    ImageLinkPipe,
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'fr-FR' },
@@ -51,3 +54,4 @@ export class CoreModule {
     registerLocaleData(fr.default);
   }
 }
+

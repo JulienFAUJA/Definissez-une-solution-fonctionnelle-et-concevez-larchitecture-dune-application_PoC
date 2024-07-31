@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { FormGroup, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subject, takeUntil } from 'rxjs';
-import { RegisterRequest } from 'src/app/core/interfaces/registerRequest.interface';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { RegisterRequest } from 'app/core/interfaces/registerRequest.interface';
+import { AuthService } from 'app/core/services/auth.service';
 
 @Component({
   selector: 'app-register',

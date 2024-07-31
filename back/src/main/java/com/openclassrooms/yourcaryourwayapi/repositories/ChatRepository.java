@@ -10,9 +10,7 @@ import java.util.Optional;
  * The interface Abonnement repository.
  */
 public interface ChatRepository extends CrudRepository<ChatModel, Integer> {
-
-
-
+    Optional<ChatModel> findTopByOrderByChatIdDesc();
 }
 
 

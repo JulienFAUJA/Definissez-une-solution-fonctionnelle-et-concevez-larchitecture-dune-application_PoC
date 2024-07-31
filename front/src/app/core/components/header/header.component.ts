@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-header',
@@ -9,7 +10,7 @@ export class HeaderComponent implements OnInit {
   screen_orientation!: string;
   menuOpen: boolean = false;
 
-  constructor() {}
+  constructor(private authService: AuthService) {}
 
   ngOnInit(): void {
     this.screen_orientation = window.screen.orientation.type;
@@ -37,6 +38,10 @@ export class HeaderComponent implements OnInit {
     } else {
       window.document.body.style.overflow = 'auto'; // Réactive le défilement quand le menu est fermé
     }
+  }
+
+  logOut(): void{
+    this.authService.logOut();
   }
   
 }

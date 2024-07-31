@@ -7,8 +7,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Subject, takeUntil, tap } from 'rxjs';
-import { LoginRequest } from 'src/app/core/interfaces/loginRequest.interface';
-import { AuthService } from 'src/app/core/services/auth.service';
+import { LoginRequest } from 'app/core/interfaces/loginRequest.interface';
+import { AuthService } from 'app/core/services/auth.service';
 
 @Component({
   selector: 'app-login',

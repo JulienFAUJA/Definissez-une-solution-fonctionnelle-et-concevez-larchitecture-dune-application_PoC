@@ -33,6 +33,16 @@ public class ChatService {
     private ModelMapper modelMapper;
 
     private Integer getChatId(String userEmail){
+        if(userEmail.contains("@yourcaryourway.com")){
+
+            // Récupérer le dernier chat_id de la base de données
+            ChatModel dernierChat = chatRepository.findTopByOrderByChatIdDesc()
+                    .orElseThrow(() -> new RuntimeException("No chats found in the database"));
+            System.out.println("getChatId: Service client détecté:"+userEmail+" "+dernierChat.getChatId());
+            return dernierChat.getChatId();
+        }
+
+
         // Récupérer l'utilisateur connecté par email
         UserModel utilisateur = utilisateurRepository.findByEmail(userEmail)
                 .orElseThrow(() -> new RuntimeException("User not found"));
@@ -79,8 +89,14 @@ public class ChatService {
         if (questionPostDTO.getQuestionTexte() == null) {
             throw new RuntimeException("Question text cannot be null");
         }
-        // Récupérer le chat_id de cette question
-        Integer chatId = getChatId(userEmail);
+        Integer chatId;
+        if (questionPostDTO.getChat_id() == null) {
+            // Récupérer le chat_id de cette question
+            chatId = getChatId(userEmail);
+        }
+        else {
+            chatId = questionPostDTO.getChat_id();
+        }
         QuestionDTO questionDTO = new QuestionDTO(questionPostDTO.getQuestionTexte(), userEmail);
         QuestionModel question = modelMapper.map(questionDTO, QuestionModel.class);
         question.setUtilisateur(utilisateur);

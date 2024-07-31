@@ -44,7 +44,7 @@ export class ChatService {
   }
 
   public pollQuestions(): Observable<Question[]> {
-    return interval(5000).pipe( // poll every 5 seconds
+    return interval(1000).pipe( // poll every 5 seconds
       startWith(0), 
       switchMap(() => this.all())
     );

@@ -2,15 +2,14 @@
 
 <div class="form_container">
     <h3>Chat</h3>
-  <div class="chat_frame">
+  <div class="chat_frame" #chatFrame>
     <div *ngIf="questions && questions.length > 0">
       <div *ngFor="let question of questions">
         <div
           [ngClass]="{
             'bubble-blue': question.utilisateurEmail === user1Email,
             'bubble-grey':
-              question.utilisateurEmail === user2Email ||
-              question.questionTexte.includes('Nouveau') === true
+              question.utilisateurEmail === user2Email 
           }"
           class="bubble"
         >
@@ -19,9 +18,7 @@
               {{ question.utilisateurEmail }}
             </div>
 
-            <p>
-              {{ question.questionTexte }}
-            </p>
+            <p [innerHTML]="question.questionTexte | imageLink"></p>
           </div>
         </div>
       </div>
@@ -59,12 +56,14 @@
             >Le message n'est pas valide</small
           >
         </div>
+        <small [ngClass]="{'text-danger': currentLength > maxLength}">{{currentLength}}/{{maxLength}}</small>
       </div>
   
       <button class="purple_btn" type="submit" (click)="onSubmitForm()">
         Envoyer
       </button>
     </form>
+    <audio #notificationAudio src="../../../../assets/audios/notif.mp3"></audio>
   </div>
 
 </div>

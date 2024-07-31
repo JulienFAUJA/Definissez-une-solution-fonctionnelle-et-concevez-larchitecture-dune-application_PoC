@@ -1,18 +1,18 @@
 
   
   .chat_frame {
-    margin-top: 40px;
+    margin-top: 20px;
     overflow-y: scroll;
-    height: calc(100vh - 350px);
+    height: calc(100vh - 300px);
     width: 80%;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(255, 255, 255);
     color: black;
     border: 1px solid black;
   
     .bubble {
       display: flexbox;
-      width: 50%;
+      width: 60%;
       
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
@@ -86,7 +86,7 @@
    form{
     input{
         position: relative;
-        min-width: 1200px;
+        min-width:800px;
         left: 0;
         
     }

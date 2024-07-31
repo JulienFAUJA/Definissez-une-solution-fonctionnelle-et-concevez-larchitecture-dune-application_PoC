@@ -3,7 +3,6 @@ import { Injectable } from '@angular/core';
 import { Observable, tap } from 'rxjs';
 import { LoginRequest } from '../interfaces/loginRequest.interface';
 import { RegisterRequest } from '../interfaces/registerRequest.interface';
-import { UserRequest } from '../interfaces/user.interface';
 import { Router } from '@angular/router';
 import { Token } from '../interfaces/token.interface';
 

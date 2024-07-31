@@ -1,23 +1,135 @@
+@import '../../../../styles/styles';
 
 .header-container {
-    padding: 0;
-    .header-sub-container{
-        padding: 0;
-        width: 100%; 
-        border: 1px solid black;
-        margin: 0;
-    }
+    background-color: rebeccapurple;
+    display: flex; /* Utilisez flex au lieu de inline-flexbox */
+    justify-content: space-between; /* Sépare les éléments entre les deux extrémités */
+    align-items: center; /* Centre les éléments verticalement */
+    top: 0; /* Assurez-vous que l'en-tête reste en haut lors du défilement */
+    width: 100vw; 
+    height: 50px;
+    border: 1px solid black;
+    font-size: large;
 
-
+.header_nav_ul {
+    display: flex; /* Utilisez flex pour les éléments de navigation */
+    justify-content: flex-end; /* Alignez les éléments de navigation à droite */
+    align-items: center; /* Centre les éléments verticalement */
+    list-style-type: none; /* Supprime les puces */
+    margin: 0; /* Supprime la marge par défaut */
+    margin-left: 42%;
+    padding: 0; /* Supprime le padding par défaut */
 }
 
-.center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    img{
-      width: 60%;
+.nav_item_li {
+    margin-left: 40px; /* Espace entre les éléments de navigation */
+  a{
+    color: white;
+  }
+  .brand_a{
+    font-size: 25px;
+  }
+  :not(.brand_a){
+    margin-left: 400px;
+  }
+}
+
+.active-item {
+    color: $primary_color; /* Change la couleur en orange, par exemple */
+    font-weight: bold; /* Rend le texte plus épais */
+  }
   
-    }
+
+.user_icon {
+    display: flex; /* Pour s'assurer que l'icône de l'utilisateur est correctement alignée */
+    align-items: center;
 }
+.active-item .user_icon_img {
+    border: 3px solid $primary_color; /* Ajoute une bordure violette */
+    border-radius: 50%; /* Garde la forme circulaire */
+  }
+  
+ a{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+ }
+ .menu-icon{
+    float: right;
+    z-index: 1000;
+ }
+ #burger_menu_btn{
+    float: right;
+    z-index: 1000;
+ }
+
+}
+
+.sidebar {
+    padding: 0;
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    bottom: 0;
+    overflow-y:hidden; 
+    
+    width: 70%; 
+    height: 100%; 
+    background-color: #fff;
+    transition: transform 0.3s ease-in-out; 
+    z-index: 1001;
+  }
+  
+  .overlay {
+    display: none; /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparence noire */
+    z-index: 1000; /* S'assure que l'overlay est en dessous du menu mais au-dessus du reste */
+  }
+  
+  /* Classe à toggler pour montrer ou cacher le menu */
+  .sidebar.open {
+    transform: translateX(-100%); /* Fait glisser le menu dans la vue */
+
+  }
+  
+  /* Classe à toggler pour montrer ou cacher l'overlay */
+  .overlay.show {
+    display: block;
+  }
+
+
+
+.header_nav_ul_mobile {
+    padding: 0;
+    padding-top: 25px;
+    list-style-type: none; 
+    height:100%;
+    width: 100%;
+    text-align: right;
+    justify-items: flex-end;
+    li{
+        padding: 0;
+        margin-bottom: 25px;
+        width: fit-content;
+    margin-right: 0;
+    }
+    :last-child{
+        margin-top: 60%;
+    
+    }
+    *{
+        color: black;
+        font-size: larger;
+    }
+
+}
+
+*.menu-open {
+    
+    overflow: hidden;
+  }
+
